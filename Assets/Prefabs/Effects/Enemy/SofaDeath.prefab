@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 3888163407146606507}
   - component: {fileID: 3888163407146606506}
   m_Layer: 0
-  m_Name: BoxDeath
+  m_Name: SofaDeath
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -76,7 +76,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -374324348, guid: 6197b7962b301394b94f6b0f57198cf0, type: 3}
+  m_Sprite: {fileID: -2147348512, guid: 2ef4f43b442f79c4eb310e13d4ccd5cd, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -97,7 +97,7 @@ Animator:
   m_GameObject: {fileID: 3888163407146606503}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 8f895452fd274cf47b13e0c3c74d760c, type: 2}
+  m_Controller: {fileID: 9100000, guid: c909d02577d9df24e9d61d7b3d20746f, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
