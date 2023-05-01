@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 8253636072270161087}
   - component: {fileID: 8253636072270161082}
   - component: {fileID: 7934306056054545726}
+  - component: {fileID: 3440766432629908188}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -126,7 +127,7 @@ MonoBehaviour:
   animator: {fileID: 0}
   myRigidbody: {fileID: 0}
   moveSpeed: 10
-  rotationSpeed: 60
+  rotationSpeed: 4.2
   aimMode: 0
   movementMode: 2
 --- !u!114 &8253636072270161080
@@ -144,7 +145,7 @@ MonoBehaviour:
   teamId: 0
   defaultHealth: 5
   maximumHealth: 5
-  currentHealth: 20
+  currentHealth: 5
   invincibilityTime: 0
   isAlwaysInvincible: 0
   useLives: 1
@@ -188,10 +189,26 @@ MonoBehaviour:
   projectilePrefab: {fileID: 3562651836113712045, guid: aee1688b385340b4bab2b46707955895, type: 3}
   projectileHolder: {fileID: 0}
   isPlayerControlled: 1
-  fireRate: 0.05
-  projectileSpread: 1
+  fireRate: 0.2
+  projectileSpread: 2.7
   fireEffect: {fileID: 3439847438001550479, guid: 766155e2e51d32b46b7012f72071140d, type: 3}
 --- !u!70 &7934306056054545726
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8253636072270160962}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.3720211, y: -0.94254225}
+  m_Size: {x: 1.6230125, y: 1.0469803}
+  m_Direction: 1
+--- !u!70 &3440766432629908188
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
