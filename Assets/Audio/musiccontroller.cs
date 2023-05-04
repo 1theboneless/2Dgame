@@ -3,22 +3,17 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Audio;
 using UnityEngine.UI;
-
+using UnityEngine.SceneManagement;
 public class musiccontroller : MonoBehaviour
 {
-    private void Start()
-    {
-        float savedVolume = PlayerPrefs.GetFloat("MasterVolume", 1);
-        FindObjectOfType<Slider>().value = savedVolume;
-        ChangeVolume(savedVolume);
-    }
+ 
 
     public AudioMixerGroup Mixer;
 
-    public void ChangeVolume(float volume)
+    public void ChangeVolume(float VolumeMusics)
     {
-        Mixer.audioMixer.SetFloat("MasterVolume", Mathf.Lerp(-80, 0f, volume));
-        PlayerPrefs.SetFloat("MasterVolume", volume);
+        Mixer.audioMixer.SetFloat("MusicVolume", Mathf.Lerp(-80, 0f, VolumeMusics));
+        PlayerPrefs.SetFloat("MusicVolume", VolumeMusics);
     }
-
+    
 }

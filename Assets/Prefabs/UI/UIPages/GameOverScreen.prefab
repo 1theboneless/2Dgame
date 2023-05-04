@@ -28,6 +28,7 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2950287506485050328}
   - {fileID: 7863750253148923355}
@@ -105,6 +106,7 @@ RectTransform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 8026527033205987648}
   m_RootOrder: 0
@@ -187,6 +189,7 @@ RectTransform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4106996081153782236}
   m_Father: {fileID: 8026527033205987648}
@@ -249,6 +252,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Navigation:
     m_Mode: 3
+    m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
@@ -342,6 +346,7 @@ RectTransform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 7863750253148923355}
   m_RootOrder: 0
@@ -405,6 +410,7 @@ GameObject:
   - component: {fileID: 7853616773740526028}
   - component: {fileID: 8694406052270294983}
   - component: {fileID: 8590389105808455809}
+  - component: {fileID: 8224987927675960591}
   m_Layer: 5
   m_Name: GameOverScreen
   m_TagString: Untagged
@@ -422,6 +428,7 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 8026527033205987648}
   m_Father: {fileID: 0}
@@ -483,3 +490,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defaultSelected: {fileID: 5565719392987120333}
+--- !u!114 &8224987927675960591
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9063794430247065673}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44df608eaa69ab9409faeec50678be28, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Mixer: {fileID: 24300002, guid: 1283b7de1ba53334fb8ab6f496289461, type: 2}
+  normal: {fileID: -337988544843588314, guid: 1283b7de1ba53334fb8ab6f496289461, type: 2}
+  menu: {fileID: 195687445429062993, guid: 1283b7de1ba53334fb8ab6f496289461, type: 2}

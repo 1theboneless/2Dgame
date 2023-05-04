@@ -3,9 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-/// <summary>
-/// This class controls player movement
-/// </summary>
 public class Controller : MonoBehaviour
 {
     [Header("GameObject/Component References")]
@@ -23,9 +20,6 @@ public class Controller : MonoBehaviour
     //The InputManager to read input from
     private InputManager inputManager;
 
-    /// <summary>
-    /// Enum which stores different aiming modes
-    /// </summary>
     public enum AimModes { AimTowardsMouse, AimForwards };
 
     [Tooltip("The aim mode in use by this player:\n" +
@@ -33,9 +27,7 @@ public class Controller : MonoBehaviour
         "Aim Forwards: Player aims the direction they face (doesn't face towards the mouse)")]
     public AimModes aimMode = AimModes.AimTowardsMouse;
 
-    /// <summary>
-    /// Enum to handle different movement modes for the player
-    /// </summary>
+
     public enum MovementModes { MoveHorizontally, MoveVertically, FreeRoam, Astroids };
 
     [Tooltip("The movmeent mode used by this controller:\n" +
@@ -46,7 +38,6 @@ public class Controller : MonoBehaviour
     public MovementModes movementMode = MovementModes.FreeRoam;
 
 
-    // Whether the player can aim with the mouse or not
     private bool canAimWithMouse
     {
         get
@@ -55,7 +46,7 @@ public class Controller : MonoBehaviour
         }
     }
 
-    // Whether the player's X coordinate is locked (Also assign in rigidbody)
+
     private bool lockXCoordinate
     {
         get
@@ -63,7 +54,7 @@ public class Controller : MonoBehaviour
             return movementMode == MovementModes.MoveVertically;
         }
     }
-    // Whether the player's Y coordinate is locked (Also assign in rigidbody)
+
     public bool lockYCoordinate
     {
         get
@@ -72,27 +63,13 @@ public class Controller : MonoBehaviour
         }
     }
 
-    /// <summary>
-    /// Description:
-    /// Standard Unity function called once when the script starts before Update
-    /// Inputs: 
-    /// none
-    /// Returns: 
-    /// void (no return)
-    /// </summary>
+
     private void Start()
     {
         SetupInput();
     }
 
-    /// <summary>
-    /// Description:
-    /// Standard Unity function called once per frame
-    /// Inputs: 
-    /// none
-    /// Returns: 
-    /// void (no return)
-    /// </summary>
+
     void Update()
     {
         // Collect input and move the player accordingly
@@ -101,14 +78,7 @@ public class Controller : MonoBehaviour
         SignalAnimator();
     }
 
-    /// <summary>
-    /// Description:
-    /// Sets up the input manager if it is not already set up. Throws an error if none exists
-    /// Inputs:
-    /// None
-    /// Returns:
-    /// void
-    /// </summary>
+
     private void SetupInput()
     {
         if (inputManager == null)
@@ -121,14 +91,7 @@ public class Controller : MonoBehaviour
         }
     }
 
-    /// <summary>
-    /// Description:
-    /// Handles input and moves the player accordingly
-    /// Inputs: 
-    /// none
-    /// Returns: 
-    /// void (no return)
-    /// </summary>
+
     private void HandleInput()
     {
         // Find the position that the player should look at
@@ -140,14 +103,6 @@ public class Controller : MonoBehaviour
         LookAtPoint(lookPosition);
     }
 
-    /// <summary>
-    /// Description: 
-    /// Handles signals to animator components
-    /// Inputs: 
-    /// none
-    /// Returns: 
-    /// void (no return)
-    /// </summary>
     private void SignalAnimator()
     {
         // Handle Animation
@@ -157,15 +112,6 @@ public class Controller : MonoBehaviour
         }
     }
 
-    /// <summary>
-    /// Description:
-    /// Updates the position the player is looking at
-    /// Inputs: 
-    /// none
-    /// Returns: 
-    /// Vector2
-    /// </summary>
-    /// <returns>Vector2: The position the player should look at</returns>
     public Vector2 GetLookPosition()
     {
         Vector2 result = transform.up;
@@ -180,14 +126,7 @@ public class Controller : MonoBehaviour
         return result;
     }
 
-    /// <summary>
-    /// Description:
-    /// Moves the player
-    /// Inputs: 
-    /// Vector3 movement
-    /// Returns: 
-    /// void (no return)
-    /// </summary>
+
     /// <param name="movement">The direction to move the player</param>
     private void MovePlayer(Vector3 movement)
     {
@@ -234,14 +173,6 @@ public class Controller : MonoBehaviour
         }
     }
 
-    /// <summary>
-    /// Description: 
-    /// Rotates the player to look at a point
-    /// Inputs: 
-    /// Vector3 point
-    /// Returns: 
-    /// void (no return)
-    /// </summary>
     /// <param name="point">The screen space position to look at</param>
     private void LookAtPoint(Vector3 point)
     {

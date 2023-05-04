@@ -4,35 +4,45 @@ using UnityEngine;
 using UnityEngine.Audio;
 using UnityEngine.UI;
 
-public class musiccontrollermenu : MonoBehaviour
+public class MusicControllerMenu : MonoBehaviour
 {
-    public static musiccontrollermenu instance; // Публичное статическое поле для доступа к скрипту из других объектов и сцен
+    public static MusicControllerMenu Instance;
+
+    public AudioMixer Mixer;
+    public Slider MasterSlider;
+    public Slider MusicSlider;
+    public Slider EffectsSlider;
 
     private void Awake()
     {
-        if (instance == null)
+        if (Instance == null)
         {
-            instance = this; // Присваиваем ссылку на этот объект, если ранее не было назначено других экземпляров
-            DontDestroyOnLoad(gameObject); // Не уничтожаем этот объект при переходе на другую сцену
+            Instance = this;
+            DontDestroyOnLoad(gameObject);
         }
         else
         {
-            Destroy(gameObject); // Уничтожаем этот объект, если ранее уже был назначен другой экземпляр
+            Destroy(gameObject);
         }
     }
 
     private void Start()
     {
-        float savedVolume = PlayerPrefs.GetFloat("MasterVolume", 1);
-        ChangeVolume(savedVolume);
+        MasterSlider.value = PlayerPrefs.GetFloat("MasterVolume", 1);
+        MusicSlider.value = PlayerPrefs.GetFloat("MusicVolume", 1);
+        EffectsSlider.value = PlayerPrefs.GetFloat("EffectsVolume", 1);
+        ChangeVolumes();
     }
 
-    public AudioMixerGroup Mixer;
-
-    public void ChangeVolume(float volume)
+    public void ChangeVolumes()
     {
-        Mixer.audioMixer.SetFloat("MasterVolume", Mathf.Lerp(-80, 0f, volume));
-        PlayerPrefs.SetFloat("MasterVolume", volume);
-    }
+        Mixer.SetFloat("MasterVolume", Mathf.Lerp(-80, 0f, MasterSlider.value));
+        PlayerPrefs.SetFloat("MasterVolume", MasterSlider.value);
 
+        Mixer.SetFloat("MusicVolume", Mathf.Lerp(-80, 0f, MusicSlider.value));
+        PlayerPrefs.SetFloat("MusicVolume", MusicSlider.value);
+
+        Mixer.SetFloat("EffectsVolume", Mathf.Lerp(-80, 0f, EffectsSlider.value));
+        PlayerPrefs.SetFloat("EffectsVolume", EffectsSlider.value);
+    }
 }
