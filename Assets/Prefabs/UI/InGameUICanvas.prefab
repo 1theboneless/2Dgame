@@ -468,6 +468,7 @@ GameObject:
   - component: {fileID: 5548502498502452431}
   - component: {fileID: 5548502498502452430}
   - component: {fileID: 5548502498502452425}
+  - component: {fileID: 8808914474236064926}
   m_Layer: 5
   m_Name: Pause Screen
   m_TagString: Untagged
@@ -549,6 +550,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defaultSelected: {fileID: 5548502499996746006}
+--- !u!114 &8808914474236064926
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5548502498502452427}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f997f432d34ca8640b51a0ea3355c008, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Mixer: {fileID: 24300002, guid: 1283b7de1ba53334fb8ab6f496289461, type: 2}
+  mutemenu: {fileID: 4050119593044881487, guid: 1283b7de1ba53334fb8ab6f496289461, type: 2}
+  normal: {fileID: -337988544843588314, guid: 1283b7de1ba53334fb8ab6f496289461, type: 2}
 --- !u!1 &5548502498629386862
 GameObject:
   m_ObjectHideFlags: 0

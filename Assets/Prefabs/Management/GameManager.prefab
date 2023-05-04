@@ -49,7 +49,7 @@ MonoBehaviour:
   gameManagerScore: 0
   highScore: 0
   gameIsWinnable: 1
-  enemiesToDefeat: 4
+  enemiesToDefeat: 12
   printDebugOfWinnableStatus: 1
   gameVictoryPageIndex: 1
   victoryEffect: {fileID: 6671380785883311296, guid: 1dbb1fe3f1006ce4b89f203ed833e04e, type: 3}
