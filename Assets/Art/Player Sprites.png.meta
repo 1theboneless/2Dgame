@@ -3,7 +3,7 @@ guid: 0460718af34ab1a49b6ce5194f0ec998
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
-  serializedVersion: 11
+  serializedVersion: 12
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -63,6 +63,7 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 0
+  cookieLightType: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -148,7 +149,7 @@ TextureImporter:
         width: 74
         height: 50
       alignment: 9
-      pivot: {x: 0.5117925, y: 0.93826}
+      pivot: {x: 0.5000002, y: 0.537989}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -169,7 +170,7 @@ TextureImporter:
         width: 74
         height: 50
       alignment: 9
-      pivot: {x: 0.5000002, y: 0.928564}
+      pivot: {x: 0.5000002, y: 0.537989}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -190,7 +191,7 @@ TextureImporter:
         width: 74
         height: 50
       alignment: 9
-      pivot: {x: 0.5000001, y: 0.91111124}
+      pivot: {x: 0.5000002, y: 0.537989}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -214,8 +215,8 @@ TextureImporter:
     secondaryTextures: []
     nameFileIdTable:
       Player Sprites_0: -133051263
-      Player Sprites_2: 1719943263
       Player Sprites_1: -1971100998
+      Player Sprites_2: 1719943263
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
