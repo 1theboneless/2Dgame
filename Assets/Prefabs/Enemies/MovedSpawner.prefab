@@ -155,7 +155,7 @@ MonoBehaviour:
   useLives: 0
   currentLives: 3
   maximumLives: 5
-  deathEffect: {fileID: 2452382815751308013, guid: eefdfb8e3a2c48f4097a78295dab73cf, type: 3}
+  deathEffect: {fileID: 2452382815751308013, guid: 809d82e12e6565f4da8c2bf7192a85f2, type: 3}
   hitEffect: {fileID: 6229913163069739088, guid: d6029318d740811488fd5dd38a7e1ce1, type: 3}
 --- !u!50 &3288642643435618486
 Rigidbody2D:
